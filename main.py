@@ -4,9 +4,9 @@ import logging
 
 import notificador
 import storage
-from config import BUSCAS
+from config import ATIVAR_LINKEDIN, BUSCAS, LINKEDIN_BUSCAS
 from filtros import filtrar
-from scraper import buscar_gupy, buscar_remotive
+from scraper import buscar_gupy, buscar_linkedin, buscar_remotive
 
 log = logging.getLogger("radar")
 
@@ -24,6 +24,10 @@ def main() -> None:
         coletadas += buscar_gupy(termo)
     log.info("Buscando vagas remotas na Remotive...")
     coletadas += buscar_remotive()
+    if ATIVAR_LINKEDIN:
+        for termo in LINKEDIN_BUSCAS:
+            log.info("Buscando '%s' no LinkedIn...", termo)
+            coletadas += buscar_linkedin(termo)
 
     candidatas = filtrar(coletadas)
     novas = storage.filtrar_novas(candidatas)

@@ -23,3 +23,9 @@ EXCLUIR = [r"back-?end", r"java\b", r"php", r"\.net", r"dba", r"est[aá]gi", r"d
 SENIORIDADE: list[str] = []
 
 SOMENTE_REMOTO = False
+
+# --- LinkedIn (endpoint público "guest", sem login; pode ser bloqueado a qualquer momento) ---
+ATIVAR_LINKEDIN = True
+LINKEDIN_BUSCAS = ["desenvolvedor front-end", "react developer"]  # poucas buscas = menos risco de bloqueio
+LINKEDIN_LOCAL = "São Paulo, Brasil"
+LINKEDIN_ULTIMAS_HORAS = 24  # só vagas publicadas nas últimas N horas
