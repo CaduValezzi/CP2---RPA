@@ -3,6 +3,12 @@
 Automação em Python que busca vagas front-end (Gupy e Remotive), filtra por regras
 configuráveis, ignora as já vistas (SQLite) e envia as novas no Telegram.
 
+## Integrantes
+- RM551059 | Cassio Valezzi  
+- RM98215 | Gabriel Antony Cadima Ciziks 
+- ⁠RM98169 | Lucca Sabatini Tambellini
+- RM98209 | Victor Nuzzi
+
 ## Uso
 ```bash
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
