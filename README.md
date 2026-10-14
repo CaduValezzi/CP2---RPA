@@ -6,7 +6,7 @@ configuráveis, ignora as já vistas (SQLite) e envia as novas no Telegram.
 ## Uso
 ```bash
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 cp .env.example .env        # preencha TELEGRAM_TOKEN e TELEGRAM_CHAT_ID
 python main.py --dry-run    # testa sem enviar
 python main.py              # roda de verdade

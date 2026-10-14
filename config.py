@@ -20,7 +20,7 @@ EXCLUIR = [r"back-?end", r"java\b", r"php", r"\.net", r"dba", r"est[aá]gi", r"d
 
 # Se preenchido, a vaga precisa mencionar ao menos um destes termos (título ou descrição).
 # Ex.: [r"pleno", r"s[eê]nior", r"lead", r"l[ií]der"]. Vazio = qualquer senioridade.
-SENIORIDADE: list[str] = []
+SENIORIDADE: list[str] = [r"junior", r"senior"]
 
 SOMENTE_REMOTO = False
 
